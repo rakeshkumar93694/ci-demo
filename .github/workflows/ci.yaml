@@ -22,4 +22,4 @@ jobs:
 
       - name: Run flake8
         run: |
-          flake8 .  # or flake8 app.py if you only want to lint app.py
+          flake8 app.py  # or flake8 app.py if you only want to lint app.py
