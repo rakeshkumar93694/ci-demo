@@ -31,4 +31,19 @@ jobs:
 
       - name: Run flake8
         run: |
-          flake8 app.py  # or flake8 app.py if you only want to lint app.py
+          flake8 app.py
+  
+  testing:
+      steps:
+
+      - name: code checkout
+        uses: actions/checkout@v3
+
+      - name: setup python
+        uses: actions/checkout@v2
+        with:
+          python-version: 3.10
+
+      - name: run unit test
+        run: |
+          python -m unittest discover
